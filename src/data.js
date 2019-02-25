@@ -5,21 +5,7 @@
 let pokemonList;
 let pokemonByName = new Map();
 
-// const example = () => {
-//   return 'example';
-// };
-//
-// function pokemonTypes(typesOfPokemon){
-//   var typesToRetrun = ``;
-//
-//   for(var i = 0; i < typesOfPokemon.length ; i++){
-//     if(i > 0){
-//       typesToRetrun +=' y ';
-//     }
-//     typesToRetrun += typesOfPokemon[i].type.name;
-//   }
-//   return typesToRetrun;
-// }
+
 
 window.pokemon = {
 
@@ -37,6 +23,8 @@ window.pokemon = {
       for(var i = 0 ; i < pokemonList.length; i++){
         pokemonByName.set(pokemonList[i].name.toLowerCase(), i);
       }
+
+      window.main.startAllPokemons();
       // console.log(dataPokemon[0].name);
       //   area.innerHTML = `
       //   <div>
@@ -58,6 +46,21 @@ window.pokemon = {
   getPokemonByName:(nameOfPokemon) => {
     nameOfPokemon = nameOfPokemon.toLowerCase();
     return pokemonList[pokemonByName.get(nameOfPokemon)];
-  }
+  },
 
+  getPokemonsOfType: (pokemonType) => {
+    let pokemonsIdsToReturn = [];
+    for(let i = 0; i < pokemonList.length; i++){
+      for(let j = 0; j < pokemonList[i].type.length; j++){
+        if(pokemonType == pokemonList[i].type[j]){
+          pokemonsIdsToReturn.add(i);
+        }
+      }
+    }
+    return pokemonsIdsToReturn;
+  },
+
+  getPokemonsAmount: () => {
+    return pokemonList.length;
+  }
 };
