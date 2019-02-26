@@ -1,3 +1,4 @@
+
 window.pokemon = {
 
   getPokemonByNumber: (numberOfPokemon) => {
