@@ -1,3 +1,36 @@
-body{
-  background: url("images/pokemonGO.jpg") no-repeat center fixed;
+@@import "https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Sans";
+
+#features {
+  background-color: aliceblue;
+}
+
+.container-fluid {
+  background-color: aliceblue;
+  padding: 3% 15%;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+em{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  display: block;
 }
